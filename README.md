@@ -11,6 +11,70 @@ Featuring:
 - Moderation Controls
 - and more...
 
+## Road Map
+<table>
+  <thead>
+    <tr>
+      <th>Status</th>
+      <th>Task</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>X</td>
+      <td>Create plugin structure</td>
+    </tr>
+    <tr>
+      <td>X</td>
+      <td>Integrate SDK Libraries</td>
+    </tr>
+    <tr>
+      <td>X</td>
+      <td>Plugin integration with Capacitor Bridge</td>
+    </tr>
+    <tr>
+      <td>X</td>
+      <td>Picture in Picture</td>
+    </tr>
+    <tr>
+      <td>X</td>
+      <td>Basic UI Customization trough SDK flags</td>
+    </tr>
+    <tr>
+      <td>X</td>
+      <td>Advanced UI Customization</td>
+    </tr>
+  </tbody>
+</table>
+
+## Compatibility
+<table>
+  <thead>
+    <tr>
+      <th>Capacitor Version</th>
+      <th>Plugin Version</th>
+      <th>Maintained</th>
+      <th>Last Update</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        >=7.0.0
+      </td>
+      <td>
+        initial
+      </td>
+      <td>
+        YES
+      </td>
+      <td>
+        April 29, 2025
+      </td>
+    </tr>
+  </tbody>
+</table>
+
 ## Official Jitsi-Meet SDK Documentation and constants
 
 This plugin uses Jitsi Meet SDK for IOS and Android:
