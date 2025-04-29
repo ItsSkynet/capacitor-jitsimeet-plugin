@@ -1,5 +1,5 @@
 # Capacitor Jitsi Meet
-A plugin that enables Ionic Capacitor to access Jitsi Meet Conferences (https://meet.jit.si) for iOS and Android.
+A plugin that enables Ionic Capacitor to access Jitsi Meet Conferences for iOS and Android.
 
 Featuring:
 - Picture in Picture
