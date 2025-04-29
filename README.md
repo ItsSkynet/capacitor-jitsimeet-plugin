@@ -21,27 +21,27 @@ Featuring:
   </thead>
   <tbody>
     <tr>
-      <td>X</td>
+      <td>❌</td>
       <td>Create plugin structure</td>
     </tr>
     <tr>
-      <td>X</td>
+      <td>❌</td>
       <td>Integrate SDK Libraries</td>
     </tr>
     <tr>
-      <td>X</td>
+      <td>❌</td>
       <td>Plugin integration with Capacitor Bridge</td>
     </tr>
     <tr>
-      <td>X</td>
+      <td>❌</td>
       <td>Picture in Picture</td>
     </tr>
     <tr>
-      <td>X</td>
+      <td>❌</td>
       <td>Basic UI Customization trough SDK flags</td>
     </tr>
     <tr>
-      <td>X</td>
+      <td>❌</td>
       <td>Advanced UI Customization</td>
     </tr>
   </tbody>
@@ -51,8 +51,10 @@ Featuring:
 <table>
   <thead>
     <tr>
-      <th>Capacitor Version</th>
-      <th>Plugin Version</th>
+      <th>Release</th>
+      <th>Capacitor</th>
+      <th>Xcode</th>
+      <th>Android Studio</th>  
       <th>Maintained</th>
       <th>Last Update</th>
     </tr>
@@ -60,13 +62,19 @@ Featuring:
   <tbody>
     <tr>
       <td>
-        >=7.0.0
-      </td>
-      <td>
         initial
       </td>
       <td>
-        YES
+        >= 7.0.0
+      </td>
+      <td>
+        >=16.0
+      </td>
+      <td>
+        >= 2024.2.1
+      </td>
+      <td>
+        ✅
       </td>
       <td>
         April 29, 2025
@@ -87,8 +95,8 @@ This plugin uses Jitsi Meet SDK for IOS and Android:
 This plugin is made to integrate with Jitsi Meet, It is possible to run this plugin with https://meet.jitsi.si, however Jitsi warns developers to use it ONLY for development purposes due to service configuration not apt for production. Meetings created with development environment will be limited to 5 minutes. Additionally, development environment no longer allows anonymous conferences as stated in their blog published on Aug 22, 2023: [Authentication on meet.jit.si](https://jitsi.org/blog/authentication-on-meet-jit-si/)
 
 For production please use either one of these solutions below:
-- [JaaS - Jitsi as a Service](https://jaas.8x8.vc/) - PAID
-- [Self hosting](https://jitsi.github.io/handbook/docs/devops-guide/) - FREE Software, requires hardware to run
+- [JaaS - Jitsi as a Service](https://jaas.8x8.vc/) - PAID💲
+- [Self hosting](https://jitsi.github.io/handbook/docs/devops-guide/) - FREE Software, requires a server to host
 
 ## Contributing
 If you are looking to contribute to the development of this plugin, feel free to fork it and push updates to this repository!
