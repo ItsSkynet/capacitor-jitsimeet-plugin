@@ -1,4 +1,6 @@
 # Capacitor Jitsi Meet
+## Development starts on May 1st, 2025
+
 A plugin that enables Ionic Capacitor to access Jitsi Meet Conferences for iOS and Android.
 
 Featuring:
