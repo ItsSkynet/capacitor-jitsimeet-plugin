@@ -19,9 +19,6 @@ export class JitsiMeet extends WebPlugin implements CapacitorJitsiMeetPlugin {
     chatEnabled?: boolean,
     inviteEnabled?: boolean,
     callIntegrationEnabled?: boolean,
-    recordingEnabled?: boolean,
-    liveStreamingEnabled?: boolean,
-    screenSharingEnabled?: boolean,
     featureFlags?: any,
     configOverrides?: any
   }): Promise<{
