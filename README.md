@@ -23,7 +23,7 @@ Featuring:
   </thead>
   <tbody>
     <tr>
-      <td>❌</td>
+      <td>✅</td>
       <td>Create plugin structure</td>
     </tr>
     <tr>
@@ -79,7 +79,7 @@ Featuring:
         ✅
       </td>
       <td>
-        April 29, 2025
+        May 3, 2025
       </td>
     </tr>
   </tbody>
