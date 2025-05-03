@@ -16,14 +16,14 @@ public class CapacitorJitsiMeetPlugin: CAPPlugin, CAPBridgedPlugin {
     @objc func joinRoom(_ call: CAPPluginCall) {
         let value = call.getString("value") ?? ""
         call.resolve([
-            "value": implementation.echo(value)
+            "value": implementation.joinRoom(value)
         ])
     }
     
     @objc func leaveRoom(_ call: CAPPluginCall) {
         let value = call.getString("value") ?? ""
         call.resolve([
-            "value": implementation.echo(value)
+            "value": implementation.leaveRoom(value)
         ])
     }
 }
