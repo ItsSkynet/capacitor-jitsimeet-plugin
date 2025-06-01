@@ -2,30 +2,22 @@
   "name": "capacitor-jitsimeet-plugin",
   "version": "0.0.1",
   "description": "CapacitorJitsimeetPlugin Capacitor Plugin",
-  "unpkg": "dist/plugin.js",
+  "main": "dist/esm/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/esm/index.d.ts",
   "files": [
     "dist/",
     "ios/",
     "android/",
     "CapacitorJitsiMeet.podspec"
   ],
-  "author": "me",
+  "author": "CollabWorkx LLC",
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com.git"
-  },
-  "bugs": {
-    "url": "https://github.com/issues"
-  },
   "keywords": [
     "capacitor",
     "plugin",
     "native"
   ],
-  "main": "dist/esm/index.js",
-  "module": "dist/esm/index.js",
-  "types": "dist/esm/index.d.ts",
   "scripts": {
     "build": "npm run clean && tsc && rollup -c rollup.config.mjs",
     "clean": "rimraf ./dist",
@@ -36,28 +28,24 @@
   },
   "devDependencies": {
     "@capacitor/android": "^7.0.0",
-    "@capacitor/core": "^7.0.0",
-    "@capacitor/docgen": "^0.3.0",
     "@capacitor/ios": "^7.0.0",
     "@ionic/eslint-config": "^0.4.0",
     "@ionic/prettier-config": "^4.0.0",
     "@ionic/swiftlint-config": "^2.0.0",
     "@rollup/plugin-node-resolve": "^15.3.0",
-    "eslint": "^8.57.0",
     "prettier": "^3.4.2",
     "prettier-plugin-java": "^2.6.6",
     "rimraf": "^6.0.1",
     "rollup": "^4.30.1",
     "swiftlint": "^2.0.0",
-    "typescript": "~4.1.5"
+    "typescript": "~4.8.4"
+  },
+  "dependencies": {
+    "@capacitor/cli": "^7.0.0",
+    "@capacitor/core": "^7.0.0"
   },
   "peerDependencies": {
     "@capacitor/core": ">=7.0.0"
-  },
-  "prettier": "@ionic/prettier-config",
-  "swiftlint": "@ionic/swiftlint-config",
-  "eslintConfig": {
-    "extends": "@ionic/eslint-config/recommended"
   },
   "capacitor": {
     "ios": {
@@ -66,5 +54,14 @@
     "android": {
       "src": "android"
     }
+  },
+  "prettier": "@ionic/prettier-config",
+  "swiftlint": "@ionic/swiftlint-config",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ItsSkynet/capacitor-jitsimeet-plugin.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ItsSkynet/capacitor-jitsimeet-plugin/issues"
   }
 }
