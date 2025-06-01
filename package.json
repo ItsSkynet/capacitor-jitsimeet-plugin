@@ -1,7 +1,7 @@
 {
   "name": "@collabworkx/capacitor-jitsimeet-plugin",
   "version": "0.1.0",
-  "description": "CapacitorJitsimeetPlugin Capacitor Plugin",
+  "description": "A Jitsi meet plugin adjusted for modern hardware",
   "main": "dist/esm/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/esm/index.d.ts",
@@ -9,7 +9,7 @@
     "dist/",
     "ios/",
     "android/",
-    "CapacitorJitsiMeet.podspec"
+    "CollabworkxCapacitorJitsimeetPlugin.podspec"
   ],
   "author": "CollabWorkx LLC",
   "license": "Apache License 2.0",
