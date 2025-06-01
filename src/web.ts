@@ -1,38 +1,39 @@
 import { WebPlugin } from '@capacitor/core';
+import { JitsiPlugin } from './definitions';
 
-import type { CapacitorJitsiMeetPlugin } from './definitions';
+export class JitsiWeb extends WebPlugin implements JitsiPlugin {
 
-
-export class JitsiMeet extends WebPlugin implements CapacitorJitsiMeetPlugin {
   // @ts-ignore
-  async joinRoom(options: {
-    roomName: string,
-    url: string,
-    token?: string,
-    channelLastN?: string,
-    displayName?: string,
-    subject?: string,
-    email?: string,
-    avatarURL?: string,
-    startWithAudioMuted?: boolean,
-    startWithVideoMuted?: boolean,
-    chatEnabled?: boolean,
-    inviteEnabled?: boolean,
-    callIntegrationEnabled?: boolean,
-    featureFlags?: any,
-    configOverrides?: any
+    async joinConference(options: {
+        roomName: string;
+        url: string;
+        token?: string;
+        channelLastN?: string;
+        displayName?: string;
+        subject?: string;
+        email?: string;
+        avatarURL?: string;
+        startWithAudioMuted?: boolean;
+        startWithVideoMuted?: boolean;
+        chatEnabled?: boolean;
+        inviteEnabled?: boolean;
+        callIntegrationEnabled?: boolean;
+        recordingEnabled?: boolean;
+        liveStreamingEnabled?: boolean;
+        screenSharingEnabled?: boolean;
+        featureFlags?: any;
+        configOverrides?: any;
   }): Promise<{
-    success?: boolean
+        success?: boolean;
   }> {
-    throw this.unavailable('Could not join room due to SDK error');
+      throw this.unavailable('the web implementation is not available. Please use Jitsi Meet API to implement Jitsi in web app');
   };
-
-  // @ts-ignore
-  async leaveRoom(options?: {}): Promise<{ success?: boolean; }> {
-    throw this.unavailable('Could not leave room due to SDK error or Room was not initialized');
+    // @ts-ignore
+  async leaveConference(options?: {}): Promise<{ success?: boolean; }> {
+      throw this.unavailable('the web implementation is not available. Please use Jitsi Meet API to implement Jitsi in web app');
   };
 }
 
-const JitsiMeetPlugin = new JitsiMeet();
+const Jitsi = new JitsiWeb();
 
-export { JitsiMeetPlugin };
+export { Jitsi };

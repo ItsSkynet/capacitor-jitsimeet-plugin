@@ -1,10 +1,10 @@
 import { registerPlugin } from '@capacitor/core';
 
-import type { CapacitorJitsiMeetPlugin } from './definitions';
+import type { JitsiPlugin } from './definitions';
 
-const CapacitorJitsiMeetPlugin = registerPlugin<CapacitorJitsiMeetPlugin>('CapacitorJitsimeetPlugin', {
-  web: () => import('./web').then((m) => new m.CapacitorJitsimeetPluginWeb()),
+const Jitsi = registerPlugin<JitsiPlugin>('Jitsi', {
+    web: () => import('./web').then(m => new m.JitsiWeb()),
 });
 
 export * from './definitions';
-export { CapacitorJitsiMeetPlugin };
+export { Jitsi };

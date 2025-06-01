@@ -7,8 +7,8 @@ ext {
 
 buildscript {
     repositories {
-        google()
         mavenCentral()
+        google()
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:8.7.2'
@@ -18,7 +18,7 @@ buildscript {
 apply plugin: 'com.android.library'
 
 android {
-    namespace "com.mycompany.capacitor.jitsimeet.plugin"
+    namespace "com.capacitor.jitsi.plugin.capacitorjitsimeet"
     compileSdk project.hasProperty('compileSdkVersion') ? rootProject.ext.compileSdkVersion : 35
     defaultConfig {
         minSdkVersion project.hasProperty('minSdkVersion') ? rootProject.ext.minSdkVersion : 23
@@ -40,6 +40,7 @@ android {
         sourceCompatibility JavaVersion.VERSION_21
         targetCompatibility JavaVersion.VERSION_21
     }
+
 }
 
 repositories {
@@ -51,7 +52,12 @@ repositories {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation project(':capacitor-android')
-    implementation "androidx.appcompat:appcompat:$androidxAppCompatVersion"
+    implementation ('org.jitsi.react:jitsi-meet-sdk:11.1.0') { transitive = true }
+    implementation 'androidx.activity:activity:1.2.3'
+
+    // Firebase
+    implementation 'com.google.firebase:firebase-dynamic-links:16.1.5'
+
     testImplementation "junit:junit:$junitVersion"
     androidTestImplementation "androidx.test.ext:junit:$androidxJunitVersion"
     androidTestImplementation "androidx.test.espresso:espresso-core:$androidxEspressoCoreVersion"
