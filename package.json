@@ -1,6 +1,6 @@
 {
   "name": "capacitor-jitsimeet-plugin",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "CapacitorJitsimeetPlugin Capacitor Plugin",
   "main": "dist/esm/index.js",
   "module": "dist/esm/index.js",
