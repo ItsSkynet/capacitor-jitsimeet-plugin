@@ -1,5 +1,5 @@
 {
-  "name": "capacitor-jitsimeet-plugin",
+  "name": "@collabworkx/capacitor-jitsimeet-plugin",
   "version": "0.1.0",
   "description": "CapacitorJitsimeetPlugin Capacitor Plugin",
   "main": "dist/esm/index.js",
