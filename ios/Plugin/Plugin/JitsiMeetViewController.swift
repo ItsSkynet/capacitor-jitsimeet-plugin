@@ -3,7 +3,7 @@
 //  Plugin
 //
 //  Created by Calvin Ho on 1/25/19.
-//
+//  Edited by itsSkynet from CollabWorkx LLC on May of 2025
 
 import Foundation
 import UIKit
@@ -37,24 +37,13 @@ public class JitsiMeetViewController: UIViewController, UIGestureRecognizerDeleg
 
         print("[Jitsi Plugin Native iOS]: JitsiMeetViewController::openJitsiMeet");
 
-        // create and configure the absorbPointerView and jitsimeet view
         let jitsiMeetView = JitsiMeetView()
         jitsiMeetView.delegate = self
         self.jitsiMeetView = jitsiMeetView
         jitsiMeetView.join(options)
-
-        // Enable jitsimeet view to be a view that can be displayed
-        // on top of all the things, and let the coordinator to manage
-        // the view state and interactions
-        // pipViewCoordinator = PiPViewCoordinator(withView: jitsiMeetView)
-        // pipViewCoordinator?.configureAsStickyView(withParentView: view)
         
-        //New code by Amol
         pipViewCoordinator = PiPViewCoordinator(withView: jitsiMeetView)
         pipViewCoordinator?.configureAsStickyView(withParentView: view)
-        
-        // animate in
-        //jitsiMeetView.alpha = 0
         pipViewCoordinator?.show()
         // uncomment line below to start meet in pip mode
         // enterPicture(inPicture: [:])
