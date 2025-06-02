@@ -27,11 +27,11 @@ Featuring:
       <td>Create plugin structure</td>
     </tr>
     <tr>
-      <td>❌</td>
+      <td>✅</td>
       <td>Integrate SDK Libraries</td>
     </tr>
     <tr>
-      <td>❌</td>
+      <td>✅</td>
       <td>Plugin integration with Capacitor Bridge</td>
     </tr>
     <tr>
@@ -39,7 +39,7 @@ Featuring:
       <td>Picture in Picture</td>
     </tr>
     <tr>
-      <td>❌</td>
+      <td>✅</td>
       <td>Basic UI Customization trough SDK flags</td>
     </tr>
     <tr>
