@@ -7,8 +7,16 @@ import UIKit
  * here: https://capacitor.ionicframework.com/docs/plugins/ios
  */
 @objc(Jitsi)
-public class Jitsi: CAPPlugin {
-
+public class Jitsi: CAPPlugin, CAPBridgedPlugin {
+    public var identifier = "Jitsi"
+    public var jsName = "Jitsi"
+    public let pluginMethods: [CAPPluginMethod] = [
+        CAPPluginMethod(name: "joinConference", returnType: CAPPluginReturnPromise),
+        CAPPluginMethod(name: "leaveConference", returnType: CAPPluginReturnPromise),
+        CAPPluginMethod(name: "hideConference", returnType: CAPPluginReturnPromise),
+        CAPPluginMethod(name: "showConference", returnType: CAPPluginReturnPromise)
+    ]
+    
     var jitsiMeetViewController: JitsiMeetViewController?
 
     @objc func joinConference(_ call: CAPPluginCall) {
@@ -44,10 +52,6 @@ public class Jitsi: CAPPlugin {
                 builder.setAudioMuted(isAudioMuted);
             }
 
-            /* if let isAudioOnly = call.options["isAudioOnly"] as? Bool {
-                builder.setAudioOnly(isAudioOnly)
-            } */
-
             if let isVideoMuted = call.options["startWithVideoMuted"] as? Bool {
                 builder.setVideoMuted(isVideoMuted)
             }
@@ -61,18 +65,17 @@ public class Jitsi: CAPPlugin {
                 builder.userInfo = JitsiMeetUserInfo(displayName: displayName, andEmail: email, andAvatar: avatarUrl)
             }
 
-            // default PiP is off as the feature is not fully functioning yet, but allow user to overrides it by providing the featureFlag
             builder.setFeatureFlag("pip.enabled", withBoolean: false)
 
-            // if not set in the feature flags above, this will take effect
             if let chatEnabled = call.options["chatEnabled"] as? Bool {
                 builder.setFeatureFlag("chat.enabled", withBoolean: chatEnabled)
             }
             if let inviteEnabled = call.options["inviteEnabled"] as? Bool {
                 builder.setFeatureFlag("invite.enabled", withBoolean: inviteEnabled)
             }
+            
+            builder.setFeatureFlag("call-integration.enabled", withValue: false);
 
-            // setfeatureFlag() provides finer control, and will override some of the settings above
             let featureFlags = call.options["featureFlags"] as? Dictionary<String, Any>
 
             featureFlags?.forEach { key, value in
@@ -89,10 +92,7 @@ public class Jitsi: CAPPlugin {
                 }
                 builder.setFeatureFlag(key, withValue: readValue);
             }
-            #if DEBUG
-                builder.setFeatureFlag("call-integration.enabled", withValue: false);
-                print("disable CallKit in debug mode to prevent call from disconnecting in simulators.")
-            #endif
+            
 
             let configOverrides = call.options["configOverrides"] as? Dictionary<String, Any>
             configOverrides?.forEach { key, value in
@@ -103,16 +103,48 @@ public class Jitsi: CAPPlugin {
         self.jitsiMeetViewController?.delegate = self;
 
         DispatchQueue.main.async {
-            self.bridge?.viewController?.present(self.jitsiMeetViewController!, animated: true, completion: { call.resolve(["success": true ]) });
+            if let parentVC = self.bridge?.viewController,
+               let jitsiVC = self.jitsiMeetViewController {
+
+                parentVC.addChild(jitsiVC)
+                parentVC.view.addSubview(jitsiVC.view)
+                jitsiVC.view.frame = parentVC.view.bounds
+                jitsiVC.didMove(toParent: parentVC)
+
+                call.resolve(["success": true])
+            }
         }
     }
 
     @objc func leaveConference(_ call: CAPPluginCall) {
         DispatchQueue.main.async {
-            self.jitsiMeetViewController?.leave();
-            call.resolve([
-                "success": true
-            ])
+            self.jitsiMeetViewController?.leave()
+
+            if let jitsiVC = self.jitsiMeetViewController {
+                jitsiVC.willMove(toParent: nil)
+                jitsiVC.view.removeFromSuperview()
+                jitsiVC.removeFromParent()
+            }
+
+            self.jitsiMeetViewController = nil
+
+            call.resolve(["success": true])
+        }
+    }
+
+    @objc func hideConference(_ call: CAPPluginCall) {
+        print("[Jitsi Plugin Native iOS]: JitsiMeetViewController::hideConference");
+        DispatchQueue.main.async {
+            self.jitsiMeetViewController?.pipViewCoordinator?.hide()
+            call.resolve(["success": true])
+        }
+    }
+
+    @objc func showConference(_ call: CAPPluginCall) {
+        print("[Jitsi Plugin Native iOS]: JitsiMeetViewController::showConference");
+        DispatchQueue.main.async {
+            self.jitsiMeetViewController?.pipViewCoordinator?.show()
+            call.resolve(["success": true])
         }
     }
 }
@@ -132,5 +164,9 @@ extension Jitsi: JitsiMeetViewControllerDelegate {
 
     @objc func onParticipantsInfoRetrieved(_ dataString: String) {
         self.bridge?.triggerWindowJSEvent(eventName: "onParticipantsInfoRetrieved", data: dataString);
+    }
+
+    @objc func onCustomButtonPressed(_ dataString: String) {
+        self.bridge?.triggerWindowJSEvent(eventName: "onCustomButtonPressed", data: dataString)
     }
 }

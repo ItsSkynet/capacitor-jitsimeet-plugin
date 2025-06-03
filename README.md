@@ -35,7 +35,7 @@ Featuring:
       <td>Plugin integration with Capacitor Bridge</td>
     </tr>
     <tr>
-      <td>❌</td>
+      <td>✅ - Manual trough custom callbacks from JS land</td>
       <td>Picture in Picture</td>
     </tr>
     <tr>
@@ -43,7 +43,7 @@ Featuring:
       <td>Basic UI Customization trough SDK flags</td>
     </tr>
     <tr>
-      <td>❌</td>
+      <td>✅</td>
       <td>Advanced UI Customization</td>
     </tr>
   </tbody>
@@ -64,7 +64,7 @@ Featuring:
   <tbody>
     <tr>
       <td>
-        initial
+        0.1.4
       </td>
       <td>
         >= 7.0.0
@@ -79,7 +79,7 @@ Featuring:
         ✅
       </td>
       <td>
-        May 3, 2025
+        June 2, 2025
       </td>
     </tr>
   </tbody>
