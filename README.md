@@ -1,5 +1,5 @@
 # Capacitor Jitsi Meet
-## A plugin Maintained by CollabWorkx.com
+## Maintained by CollabWorkx.com
 
 A plugin that enables Ionic Capacitor to access Jitsi Meet Conferences for iOS and Android.
 
