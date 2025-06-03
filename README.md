@@ -113,6 +113,7 @@ const result = await Jitsi.joinConference({
         'recording.enabled': false, // disable as it requires Dropbox integration
         'live-streaming.enabled': false, // 'sign in on Google' button not yet functional
         'android.screensharing.enabled': false, // experimental feature, not fully production ready
+        'pip.enabled': false, // flat that enables PiP mode
     },
 
     // optional parameters
