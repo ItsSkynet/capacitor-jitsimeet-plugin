@@ -1,5 +1,6 @@
 # Capacitor Jitsi Meet
 ## Maintained by CollabWorkx.com
+[![NPM](https://img.shields.io/badge/NPM-%23CB3837.svg?style=for-the-badge&logo=npm&logoColor=white)](https://www.npmjs.com/package/@collabworkx/capacitor-jitsimeet-plugin)
 
 A plugin that enables Ionic Capacitor to access Jitsi Meet Conferences for iOS and Android.
 
