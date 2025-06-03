@@ -52,6 +52,16 @@ A plugin that enables Ionic Capacitor to access Jitsi Meet Conferences for iOS a
       <td>Advanced UI Customization</td>
       <td></td>
     </tr>
+    <tr>
+      <td>❌</td>
+      <td>Pre-defined PiP to render from JS land</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>❌</td>
+      <td>WebRTC stream for Custom PiP (if possible)</td>
+      <td></td>
+    </tr>
   </tbody>
 </table>
 
