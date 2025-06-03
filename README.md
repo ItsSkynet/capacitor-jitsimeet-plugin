@@ -1,13 +1,8 @@
-# Capacitor Jitsi Meet
-
-[![NPM](https://img.shields.io/badge/NPM-%23CB3837.svg?style=for-the-badge&logo=npm&logoColor=white)](https://www.npmjs.com/package/@collabworkx/capacitor-jitsimeet-plugin)
-[<img alt="collabworkx" width="150px" src="https://collabworkx.com/img/logo.png" />](https://collabworkx.com/) 
+# Capacitor Jitsi Meet [![NPM](https://img.shields.io/badge/NPM-%23CB3837.svg?style=for-the-badge&logo=npm&logoColor=white)](https://www.npmjs.com/package/@collabworkx/capacitor-jitsimeet-plugin) [<img alt="collabworkx" width="150px" src="https://collabworkx.com/img/logo.png" />](https://collabworkx.com/) 
 
 A plugin that enables Ionic Capacitor to access Jitsi Meet Conferences for iOS and Android.
 
-Maintained by Collabworkx
-
-Featuring:
+### Featuring:
 - Picture in Picture
 - Video Calls
 - Audio Calls
