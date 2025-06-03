@@ -4,6 +4,7 @@
 [<img alt="collabworkx" width="150px" src="https://collabworkx.com/img/logo.png" />](https://collabworkx.com/) 
 
 A plugin that enables Ionic Capacitor to access Jitsi Meet Conferences for iOS and Android.
+
 Maintained by Collabworkx
 
 Featuring:
