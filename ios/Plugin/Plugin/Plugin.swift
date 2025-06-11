@@ -19,7 +19,7 @@ public class Jitsi: CAPPlugin, CAPBridgedPlugin {
     
     var jitsiMeetViewController: JitsiMeetViewController?
 
-    @objc func joinConference(_ call: CAPPluginCall) {
+    @objc public func joinConference(_ call: CAPPluginCall) {
 
         let podBundle = Bundle(for: JitsiMeetViewController.self)
         let bundleURL = podBundle.url(forResource: "Plugin", withExtension: "bundle")
