@@ -79,9 +79,11 @@ protocol JitsiMeetViewControllerDelegate: AnyObject {
 extension JitsiMeetViewController: JitsiMeetViewDelegate {
     public func enterPicture(inPicture data: [AnyHashable : Any]!) {
         self.pipViewCoordinator?.hide()
+        self.view.isHidden = true
     }
     
     public func exitPictureInPicture(inPicture data: [AnyHashable : Any]!) {
+        self.view.isHidden = false
         self.pipViewCoordinator?.show()
     }
     

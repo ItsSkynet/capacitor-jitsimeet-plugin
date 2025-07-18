@@ -2,6 +2,8 @@
 
 A plugin that enables Ionic Capacitor to access Jitsi Meet Conferences for iOS and Android.
 
+Development on break, resumes June 16th, 2025.
+
 ### Featuring:
 - Picture in Picture
 - Video Calls
@@ -12,7 +14,7 @@ A plugin that enables Ionic Capacitor to access Jitsi Meet Conferences for iOS a
 - Moderation Controls
 - and more...
 
-## Road Map
+## iOS Road Map
 <table>
   <thead>
     <tr>
@@ -49,6 +51,59 @@ A plugin that enables Ionic Capacitor to access Jitsi Meet Conferences for iOS a
     </tr>
     <tr>
       <td>✅</td>
+      <td>Advanced UI Customization</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>❌</td>
+      <td>Pre-defined PiP to render from JS land</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>❌</td>
+      <td>WebRTC stream for Custom PiP (if possible)</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+
+## Android Road Map
+<table>
+  <thead>
+    <tr>
+      <th>Status</th>
+      <th>Task</th>
+      <th>Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>✅</td>
+      <td>Create plugin structure</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>✅</td>
+      <td>Integrate SDK Libraries</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>❌</td>
+      <td>Plugin integration with Capacitor Bridge</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>❌</td>
+      <td>Picture in Picture</td>
+      <td>Custom PiP using WebView</td>
+    </tr>
+    <tr>
+      <td>❌</td>
+      <td>Basic UI Customization trough SDK flags</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>❌</td>
       <td>Advanced UI Customization</td>
       <td></td>
     </tr>

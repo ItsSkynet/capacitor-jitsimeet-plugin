@@ -19,7 +19,7 @@ public class Jitsi: CAPPlugin, CAPBridgedPlugin {
     
     var jitsiMeetViewController: JitsiMeetViewController?
 
-    @objc func joinConference(_ call: CAPPluginCall) {
+    @objc public func joinConference(_ call: CAPPluginCall) {
 
         let podBundle = Bundle(for: JitsiMeetViewController.self)
         let bundleURL = podBundle.url(forResource: "Plugin", withExtension: "bundle")
@@ -136,6 +136,7 @@ public class Jitsi: CAPPlugin, CAPBridgedPlugin {
         print("[Jitsi Plugin Native iOS]: JitsiMeetViewController::hideConference");
         DispatchQueue.main.async {
             self.jitsiMeetViewController?.pipViewCoordinator?.hide()
+            self.jitsiMeetViewController?.view.isHidden = true
             call.resolve(["success": true])
         }
     }
@@ -143,6 +144,7 @@ public class Jitsi: CAPPlugin, CAPBridgedPlugin {
     @objc func showConference(_ call: CAPPluginCall) {
         print("[Jitsi Plugin Native iOS]: JitsiMeetViewController::showConference");
         DispatchQueue.main.async {
+            self.jitsiMeetViewController?.view.isHidden = false
             self.jitsiMeetViewController?.pipViewCoordinator?.show()
             call.resolve(["success": true])
         }
