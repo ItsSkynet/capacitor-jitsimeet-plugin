@@ -88,22 +88,22 @@ Development on break, resumes June 16th, 2025.
       <td></td>
     </tr>
     <tr>
-      <td>❌</td>
+      <td>✅</td>
       <td>Plugin integration with Capacitor Bridge</td>
       <td></td>
     </tr>
     <tr>
-      <td>❌</td>
+      <td>✅</td>
       <td>Picture in Picture</td>
       <td>Custom PiP using WebView</td>
     </tr>
     <tr>
-      <td>❌</td>
+      <td>✅</td>
       <td>Basic UI Customization trough SDK flags</td>
       <td></td>
     </tr>
     <tr>
-      <td>❌</td>
+      <td>✅</td>
       <td>Advanced UI Customization</td>
       <td></td>
     </tr>
