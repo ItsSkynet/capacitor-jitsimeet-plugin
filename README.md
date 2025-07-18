@@ -135,7 +135,7 @@ Development on break, resumes June 16th, 2025.
   <tbody>
     <tr>
       <td>
-        0.1.4
+        0.1.6
       </td>
       <td>
         >= 7.0.0
