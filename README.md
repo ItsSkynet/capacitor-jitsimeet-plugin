@@ -103,19 +103,9 @@ Development on break, resumes June 16th, 2025.
       <td></td>
     </tr>
     <tr>
-      <td>✅</td>
+      <td>❌</td>
       <td>Advanced UI Customization</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>❌</td>
-      <td>Pre-defined PiP to render from JS land</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>❌</td>
-      <td>WebRTC stream for Custom PiP (if possible)</td>
-      <td></td>
+      <td>Issue found for custom buttons, fix is in development</td>
     </tr>
   </tbody>
 </table>
