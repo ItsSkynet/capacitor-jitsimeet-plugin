@@ -95,7 +95,7 @@ Development on break, resumes June 16th, 2025.
     <tr>
       <td>✅</td>
       <td>Picture in Picture</td>
-      <td>Custom PiP using WebView</td>
+      <td>Native</td>
     </tr>
     <tr>
       <td>✅</td>
