@@ -2,8 +2,6 @@
 
 A plugin that enables Ionic Capacitor to access Jitsi Meet Conferences for iOS and Android.
 
-Development on break, resumes June 16th, 2025.
-
 ### Featuring:
 - Picture in Picture
 - Video Calls
