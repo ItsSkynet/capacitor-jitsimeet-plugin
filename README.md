@@ -117,7 +117,7 @@ A plugin that enables Ionic Capacitor to access Jitsi Meet Conferences for iOS a
       <th>Xcode</th>
       <th>Android Studio</th>  
       <th>Maintained</th>
-      <th>Last Update</th>
+      <th>Last Update (release)</th>
     </tr>
   </thead>
   <tbody>
@@ -138,7 +138,7 @@ A plugin that enables Ionic Capacitor to access Jitsi Meet Conferences for iOS a
         ✅
       </td>
       <td>
-        June 2, 2025
+        Luly 18, 2025
       </td>
     </tr>
   </tbody>
