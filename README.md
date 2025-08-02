@@ -250,7 +250,7 @@ const handleCustomButton = async (event) => {
 
 window.addEventListener('onCustomButtonPressed', handleCustomButton);
 ```
-### Custom PiP information
+### Custom PiP information (iOS only)
 This PiP Mode relies on building custom interfaces that display conference information, PiP mode natively for Jitsi is at this point nearly impossible to implement without reliying on low performance gestureDelegations that need to be passed on to the webview scope.
 For now, this can be used to create minimized views similar to whatsapp. Newer updates on call start will try to give back RTCVideo information to preview.
 
